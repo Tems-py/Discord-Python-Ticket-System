@@ -228,3 +228,5 @@ await channel_log.send(embed=embed)
 If you did everything correctly the bot should work like in the examples!
 
 Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
+
+(I will not reply to E-Mails)
