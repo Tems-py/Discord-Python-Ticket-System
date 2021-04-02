@@ -54,17 +54,11 @@ async def ticket(self, ctx):
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-You can change the text of the embed however you want - **change the name of the author in the embed (TiLiKas Support Bot)**
+You can change the text of the embed however you want - **change the author-name (TiLiKas-Tickets)**
 
-6. Go on your discord server and create a category called ``tickets``.
+9. If you now restart the bot and click on the envelope a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) should appear.
 
-7. Create two channels. One called ``tickets`` and the other one ``log-channel``.
 
-7. Start the bot and type ``?ticket`` in the ``tickets`` channel.
-
-If you did everything correctly you will see a message like [this](https://cdn.discordapp.com/attachments/771635939700768769/798486004981039107/unknown.png).
-
-8. After you are done navigate to the folder where your bot is saved and open ``reaction.py``.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
