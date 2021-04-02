@@ -20,15 +20,13 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
 
-2. Store the code in a new directory - remember the path!
+2. Create a database named ``PostgresSQL-Tickets`` and add two tables.  
 
-3. Create a database named ``PostgresSQL-Tickets`` and add two tables.  
+3. Name the first table ``tickets`` and the second one ``requests``. 
 
-4. Name the first table ``tickets`` and the second one ``requests``. 
+4. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). Make sure that ``guild_id`` is a primary key.
 
-5. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). Make sure that ``guild_id`` is a primary key.
-
-6. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
+5. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
