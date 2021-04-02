@@ -54,19 +54,9 @@ async def ticket(self, ctx):
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-You can change the text of the embed however you want - **change the author-name (TiLiKas-Tickets)**
+**I would recommend to change the authors-name (TiLiKas-Tickets)**
 
-9. If you now restart the bot and click on the 📩 a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) should appear.
-
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-```python
-
-```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**ALSO dont forget to change the authors name to the name of your bot!**
+9. If you done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
