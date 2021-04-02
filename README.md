@@ -32,9 +32,25 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 7. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
 
+8. If you want to edit the embed-message open ``ticket.py``.
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
+@commands.command()
+@commands.has_permissions(administrator=True)
+async def ticket(self, ctx):
 
+    embed = discord.Embed(
+        title="Would you like to create a ticket?", 
+        description="If you have any questions or concerns create a new ticket by clicking on the emoji below this message.", 
+        color=0xf7fcfd)
+
+    embed.add_field(name="Do you want to report someone?", value="Please contact a supporter or moderator directly!", inline=True)
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/771635939700768769/773121323341578250/external-content.duckduckgo.com.png")
+    embed.set_author(name="TiLiKas-Tickets")
+
+    msg = await ctx.send(embed=embed)
+    await msg.add_reaction("📩")
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
