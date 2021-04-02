@@ -62,7 +62,7 @@ Now you have three diffrent emoji choices:
 
 ✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
-⛔ -> Mention every supporter (Does not do anything right now - I'm at it right now!)
+⛔ -> Mention every supporter (Does not do anything right now - I'm at it!)
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds and send a message in the ``ticket-log`` channel.
 
@@ -73,5 +73,6 @@ If you did everything correctly your bot should work like in the examples!
 Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
 
 I will not reply to basic questions like "How can I start my bot" or if the error message clearly states what is not working. 
+
 As I wrote at the beginning, this tutorial is not for complete beginners.
 
