@@ -68,7 +68,7 @@ Now you have three diffrent emoji choices:
 
 # Done
 
-If you did everything correctly the bot should work like in the examples!
+If you did everything correctly your bot should work like in the examples!
 
-Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
+Still questions? Join my [discord server](https://discord.gg/WRH22qat76) - I will not reply to basic questions like "How can I start my bot". Also if the error message clearly states what is not working. As I wrote at the beginning, this tutorial is not for complete beginners.
 
