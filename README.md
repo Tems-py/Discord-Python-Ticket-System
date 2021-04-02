@@ -6,7 +6,7 @@ This is not supposed to be a copy and paste exercise, if you want to recreate th
 
 If you have any improvement suggestions feel free to contact me.
 
-### For beginners of discord.py!
+### NOT for beginners of discord.py!
 
 If you are completly new to discord.py or generally python - DO NOT JUST copy the code - study the syntax first and try slightly easier projects. 
 
