@@ -20,7 +20,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
 
-2. Create a database named ``PostgreSQL-Tickets`` and add two tables.  
+2. Create a database named ``PostgreSQL-Tickets`` and add two tables. ([tutorial](https://www.youtube.com/watch?v=hSPhZTCAvG0)) 
 
 3. Name the first table ``tickets`` and the second one ``requests``. 
 
