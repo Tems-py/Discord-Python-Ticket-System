@@ -12,10 +12,10 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 # Requirements
 
-- Python 3.8.6 ([download](https://www.python.org/downloads/release/python-386/))
-- discord.py (pip install -U discord.py[voice]) (Tested with version 1.6.0)
-- PostgresSQL Database (https://www.postgresql.org/download/) (or anything similar)
-- pip install asyncpg
+- Python 3.8.6 or higher
+- discord.py (Tested with version 1.6.0)
+- PostgresSQL Database (or anything similar)
+- asyncpg
 
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
@@ -24,7 +24,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 3. Name the first table ``tickets`` and the second one ``requests``. 
 
-4. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). Make sure that ``guild_id`` is a primary key.
+4. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). **Make sure that ``guild_id`` is a primary key.**
 
 5. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
 
@@ -32,10 +32,9 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 7. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
 
-8. If you want to edit the embed-message open ``ticket.py``.
+8. If you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
-9. If you are done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
-
+If you want to change the embed-message open ``ticket.py``.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
 @commands.command()
@@ -62,7 +61,7 @@ Now you have three diffrent emoji choices:
 
 ✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
-⛔ -> Mention every supporter (Does not do anything right now - I'm at it!)
+⛔ -> Mention every supporter (*Does not do anything right now - I'm at it!*)
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds and send a message in the ``ticket-log`` channel.
 
