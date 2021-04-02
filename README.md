@@ -69,7 +69,7 @@ Now you have three diffrent emoji choices:
 
 If you did everything correctly your bot should work like in the examples!
 
-Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
+Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF)
 
 I will not reply to basic questions like "How can I start my bot" or if the error message clearly states what is not working. 
 
