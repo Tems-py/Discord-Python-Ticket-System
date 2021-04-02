@@ -26,9 +26,9 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 4. Name the first table ``tickets`` and the second one ``requests``. 
 
-5. Add two columns (guild_id and ticket_id) to the tickets-table. Make sure that ``guild_id`` is a primary key. The table should look like [this]().
+5. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). Make sure that ``guild_id`` is a primary key.
 
-6. Add three columns (guild_id, channel_name and channel_id) to the requests-table. **We do not need a primary key!**
+6. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
