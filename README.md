@@ -34,6 +34,8 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 8. If you want to edit the embed-message open ``ticket.py``.
 
+9. If you are done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
 @commands.command()
@@ -55,10 +57,6 @@ async def ticket(self, ctx):
 **I would recommend to change the authors-name (TiLiKas-Tickets)**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-9. If you are done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
-
-## What can the user do with that ticket?
 
 Now you have three diffrent emoji choices:
 
