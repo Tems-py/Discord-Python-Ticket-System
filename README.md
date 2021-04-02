@@ -34,7 +34,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 8. If you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
-##### If you want to change the embed-message open ``ticket.py``.
+#### If you want to change the embed-message open ``ticket.py``.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
 @commands.command()
