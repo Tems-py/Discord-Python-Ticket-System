@@ -1,5 +1,5 @@
 # Ticket-Bot
-A discord ticket system with PostgresQL
+A discord ticket system with PostgreSQL.
 
 # Information
 This is not supposed to be a copy and paste exercise, if you want to recreate the system, learn the python basics first. 
@@ -14,7 +14,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 - Python 3.8.6 or higher
 - discord.py (Tested with version 1.6.0)
-- PostgresSQL Database (or anything similar)
+- PostgreSQL Database (or anything similar)
 - asyncpg
 
 # How to create the same bot for your server
