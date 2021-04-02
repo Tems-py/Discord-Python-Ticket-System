@@ -58,6 +58,8 @@ async def ticket(self, ctx):
 
 9. If you are done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
+## What can the user do with that ticket?
+
 Now you have three diffrent emoji choices:
 
 ✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
