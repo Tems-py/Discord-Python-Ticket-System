@@ -55,7 +55,7 @@ class Event(commands.Cog):
             ticket_channel_name = await category.create_text_channel(f'ticket-{random.randint(100,999)}', overwrites=overwrites)
             ticket_channel_id = ticket_channel_name.id
 
-            await self.client.db.execute("INSERT INTO ticket_requests (guild_id, channel_name, channel_id) VALUES ($1, $2, $3)", guild.id, str(ticket_channel_name), ticket_channel_id)
+            await self.client.db.execute("INSERT INTO requests (guild_id, channel_name, channel_id) VALUES ($1, $2, $3)", guild.id, str(ticket_channel_name), ticket_channel_id)
 
             embed = discord.Embed(title="How can we help you?", description="A supporter will take care of you as soon as \
                  possible.\n\n:white_check_mark: - Claim the ticket\n:no_entry: - Inform the supporters about your ticket\n:lock: - Close the ticket", color=0xf7fcfd)
@@ -71,7 +71,7 @@ class Event(commands.Cog):
 
         # ! IMPORT IDs
 
-        db_ticket = await self.client.db.fetch("SELECT channel_id FROM ticket_requests WHERE guild_id = $1", guild.id)
+        db_ticket = await self.client.db.fetch("SELECT channel_id FROM requests WHERE guild_id = $1", guild.id)
         
         db_ticket_channel_id = []
         for db_ticket_id in db_ticket:
@@ -109,7 +109,7 @@ class Event(commands.Cog):
         
         if channel_id in db_ticket_channel_id and emoji == "🔒" and user.bot == False:
 
-            db_channel_name = await self.client.db.fetchrow("SELECT channel_name FROM ticket_requests WHERE channel_id = $1", channel_id)
+            db_channel_name = await self.client.db.fetchrow("SELECT channel_name FROM requests WHERE channel_id = $1", channel_id)
 
             embed = discord.Embed(
                 title = "Ticket closed!",
@@ -135,7 +135,7 @@ class Event(commands.Cog):
 
             await channel_log.send(embed=embed)
 
-            await self.client.db.fetch("DELETE FROM ticket_requests WHERE channel_id = $1", channel_id)
+            await self.client.db.fetch("DELETE FROM requests WHERE channel_id = $1", channel_id)
 
 def setup(client):
     client.add_cog(Event(client))
