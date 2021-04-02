@@ -56,7 +56,7 @@ async def ticket(self, ctx):
 
 You can change the text of the embed however you want - **change the author-name (TiLiKas-Tickets)**
 
-9. If you now restart the bot and click on the envelope a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) should appear.
+9. If you now restart the bot and click on the 📩 a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) should appear.
 
 
 
@@ -69,8 +69,6 @@ You can change the text of the embed however you want - **change the author-name
 **ALSO dont forget to change the authors name to the name of your bot!**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-9. Restart the bot and klick on 📩  - it should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/798487685471797328/unknown.png)
 
 You have three diffrent emoji choices:
 
