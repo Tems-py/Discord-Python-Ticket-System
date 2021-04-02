@@ -1,5 +1,5 @@
 # Ticket-Bot
-A discord ticket system with PostgresQL.
+A discord ticket system with PostgresQL
 
 # Information
 This is not supposed to be a copy and paste exercise, if you want to recreate the system, learn the python basics first. 
@@ -14,7 +14,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 - Python 3.8.6 ([download](https://www.python.org/downloads/release/python-386/))
 - discord.py (pip install -U discord.py[voice]) (Tested with version 1.6.0)
-- a PostgresSQL Database (https://www.postgresql.org/download/) (or anything similar)
+- PostgresSQL Database (https://www.postgresql.org/download/) (or anything similar)
 - pip install asyncpg
 
 # How to create the same bot for your server
@@ -22,11 +22,13 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 2. Store the code in a new directory - remember the path!
 
-4. After you downloaded everything go to ``token.txt`` and change ``PASTE_YOUR_TOKEN_IN_HERE`` with the token from your [bot](https://discord.com/developers).
+3. Create a database named ``PostgresSQL-Tickets`` and add two tables.  
 
-5. Next open the ``cogs`` folder - in the folder are two files ``admin.py`` and ``reaction.py``.
+4. Name the first table ``tickets`` and the second one ``requests``. 
 
-6. Open ``admin.py`` - your code should look like this:
+5. Add two columns (guild_id and ticket_id) to the tickets-table. Make sure that ``guild_id`` is a primary key. The table should look like [this]().
+
+6. Add three columns (guild_id, channel_name and channel_id) to the requests-table. **We do not need a primary key!**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
