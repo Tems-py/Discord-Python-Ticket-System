@@ -28,6 +28,10 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 5. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
 
+6. Start the bot and type ``?ticket`` in your ticket-channel. A message [like](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) this should pop up.
+
+7. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
 
