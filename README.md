@@ -56,19 +56,15 @@ async def ticket(self, ctx):
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-9. If you done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
+9. If you are done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Now you have three diffrent emoji choices:
 
-You have three diffrent emoji choices:
+✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
-✅ -> Claim the ticket ([example](https://cdn.discordapp.com/attachments/771635939700768769/798489702093029376/unknown.png)) (*The creator of the ticket cant claim it*)
+⛔ -> Mention every supporter (Does not do anything right now - I'm at it right now!)
 
-⛔ -> Mention every supporter ([example](https://cdn.discordapp.com/attachments/771635939700768769/798487939063087133/unknown.png))
-
-🔒 -> Close the ticket - channel will delete itself after 10 seconds ([example](https://cdn.discordapp.com/attachments/771635939700768769/798488068038328330/unknown.png))
-
-**After closing the ticket it will no longer be accessable**
+🔒 -> Close the ticket - the channel will be delete after 10 seconds and send a message in the ``ticket-log`` channel.
 
 # Done
 
@@ -76,4 +72,3 @@ If you did everything correctly the bot should work like in the examples!
 
 Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
 
-(I will not reply to E-Mails)
