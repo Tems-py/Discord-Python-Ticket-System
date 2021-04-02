@@ -24,9 +24,9 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 3. Name the first table ``tickets`` and the second one ``requests``. 
 
-4. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). **Make sure that ``guild_id`` is a primary key.**
+4. Add two columns (guild_id and ticket_id) to the [tickets-table](https://cdn.discordapp.com/attachments/771635939700768769/827459057223860254/unknown.png). (*Make sure that ``guild_id`` is a primary key.*)
 
-5. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). **We do not need a primary key here!**
+5. Add three columns (guild_id, channel_name and channel_id) to the [requests-table](https://cdn.discordapp.com/attachments/771635939700768769/827459186870190100/unknown.png). (*We do not need a primary key here!*)
 
 6. Start the bot and type ``?ticket`` in your ticket-channel. A message like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should pop up.
 
