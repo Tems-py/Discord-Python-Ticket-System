@@ -52,9 +52,9 @@ async def ticket(self, ctx):
     msg = await ctx.send(embed=embed)
     await msg.add_reaction("📩")
 ```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 **I would recommend to change the authors-name (TiLiKas-Tickets)**
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 9. If you done you can restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
