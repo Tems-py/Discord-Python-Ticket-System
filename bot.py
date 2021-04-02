@@ -5,7 +5,6 @@ import discord
 import os
 import json
 
-# get token
 with open ("data.json", "r") as f:
     data = json.load(f)
     token = data["token"]
@@ -15,7 +14,6 @@ with open ("data.json", "r") as f:
 async def create_db_pool():
     client.db = await asyncpg.create_pool(database="PostgreSQL-Tickets", user="postgres", password=db_pswd)
 
-# definition
 intents = discord.Intents().all()
 client = commands.Bot(command_prefix="?", intents=intents, help_command=None, case_insensitive=True)
 guild = discord.Guild
