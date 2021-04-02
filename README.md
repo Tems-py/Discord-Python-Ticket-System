@@ -63,7 +63,7 @@ Now you have three diffrent emoji choices:
 
 ⛔ -> Mention every supporter (*Does not do anything right now - I'm at it!*)
 
-🔒 -> Close the ticket - the channel will be delete after 10 seconds and send a message in the ``ticket-log`` channel.
+🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
 # Done
 
