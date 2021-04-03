@@ -56,9 +56,9 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 3. Start the bot and type ``?ticket`` in your ticket-channel. A message like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should show up.
 
-7. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
+4. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
 
-8. If you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
+5. If you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/827462375803191326/unknown.png) inside.
 
 #### If you want to change the embed-message open ``ticket.py``.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ async def ticket(self, ctx):
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Now you have three diffrent emoji choices:
+There are three options for the message in the ticket channel.
 
 ✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
@@ -91,13 +91,15 @@ Now you have three diffrent emoji choices:
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
+After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will appear. All closed tickets are saved in this channel.
+
 # Done
 
 If you did everything correctly your bot should work like in the examples!
 
 Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF).
 
-I will not reply to basic questions like "How can I start my bot" or if the error message clearly states what is not working. 
+I am not going to explain how it works with other databases!
 
-As I wrote at the beginning, this tutorial is not for complete beginners.
+**As I wrote at the beginning, this tutorial is not for complete beginners.**
 
