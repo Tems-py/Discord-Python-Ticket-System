@@ -19,15 +19,17 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 # How to create a local PostgreSQL Database
 
-1. Download the installer from the [website](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+1. Download the installer from the [website](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
 
 2. After the download is complete start the installation by double-clicking on the .exe. 
 
-3. A Setup-Window should show up. 
+3. A Setup-Window should show up. Just keep clicking on NEXT until the [password window](https://cdn.discordapp.com/attachments/771635939700768769/827816815886991380/unknown.png). 
 
-4. 
+4. **Choose a good and secure password and remember it!** 
 
-5. 
+5. You can use the default settings for the next two windows.
+
+6. Now start the [installation](https://cdn.discordapp.com/attachments/771635939700768769/827819917829996554/unknown.png). 
 
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
