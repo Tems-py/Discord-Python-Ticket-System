@@ -39,7 +39,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 10. Click on **Servers** on the left side and open **Databases**. You can see that one with the name **postgres** already exists. 
 
-11. Right-Click on Databases and select **Create Database**. Take **PostgreSQL-Tickets** as the name and click on save.
+11. Right-Click on Databases and select **Create Database**. Name it **PostgreSQL-Tickets** and click on save.
 
 12. The Database should appear on the left side. Open it and scroll down to **Schemas**. If you have Schemas open, you will find **Tables** below. 
 
