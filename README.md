@@ -14,7 +14,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 - Python 3.8.6 or higher
 - discord.py (Tested with version 1.6.0)
-- PostgreSQL Database (I am using a local PostgreSQL Database - dont know how it works with online DBs)
+- PostgreSQL Database (I am using a local PostgreSQL Database)
 - asyncpg
 
 # How to create a local PostgreSQL Database
@@ -29,7 +29,9 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 5. You can use the default settings for the next two windows.
 
-6. Now start the [installation](https://cdn.discordapp.com/attachments/771635939700768769/827819917829996554/unknown.png). 
+6. Now start the [installation](https://cdn.discordapp.com/attachments/771635939700768769/827819917829996554/unknown.png).
+
+7. After the installation is finished you shuold see this [windows](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
 
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
