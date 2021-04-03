@@ -43,7 +43,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 12. The Database should appear on the left side. Open it and scroll down to **Schemas**. If you have Schemas open, you will find **Tables** below. 
 
-13. Right-Click on Tables and create a new one. Call it **tickets** and add two columns named ``guild_id (PK)`` and ``ticket_id``. It should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827830274615935026/Unbenannt.png).
+13. Right-Click on Tables and create a new one. Call it **tickets** and add two columns named ``guild_id (PK)`` and ``ticket_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/827830274615935026/Unbenannt.png).
 
 14. Add another Table named **requests** with three columns named ``guild_id``, ``channel_name`` and ``channel_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/827829056945782784/unknown.png).
 
