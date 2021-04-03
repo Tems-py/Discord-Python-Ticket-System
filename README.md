@@ -41,6 +41,14 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 11. Right-Click on Databases and select **Create Database**. Take **PostgreSQL-Tickets** as the name and click on save.
 
+12. Now the PostgreSQL-Tickets Database should appear on the left side. Open it and scroll down to **Schemas**. If you have Schemas open, you will find **Tables** below. 
+
+13. Right-Click on Tables and create a new one. Call it **tickets** and change to **Columns**. Add two columns named ``guild_id (PK)`` and ``ticket_id``. It should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827828250683244564/unknown.png).
+
+14. Add another Table named **requests** with three columns named ``guild_id``, ``channel_name`` and ``channel_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/827829056945782784/unknown.png).
+
+15. Now the database setup is finished.
+
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
 
