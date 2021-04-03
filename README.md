@@ -2,7 +2,7 @@
 A discord ticket system with PostgreSQL.
 
 # Information
-This is not supposed to be a copy and paste exercise, if you want to recreate the system, learn the python basics first. 
+This is not supposed to be a copy and paste exercise, if you want to recreate the system, learn python first. 
 
 If you have any improvement suggestions feel free to contact me.
 
@@ -14,8 +14,20 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 - Python 3.8.6 or higher
 - discord.py (Tested with version 1.6.0)
-- PostgreSQL Database (or anything similar)
+- PostgreSQL Database (I am using a local PostgreSQL Database - dont know how it works with online DBs)
 - asyncpg
+
+# How to create a local PostgreSQL Database
+
+1. Download the installer from the [website](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+
+2. After the download is complete start the installation by double-clicking on the .exe. 
+
+3. A Setup-Window should show up. 
+
+4. 
+
+5. 
 
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
