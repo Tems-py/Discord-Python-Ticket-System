@@ -33,6 +33,14 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 7. After the installation is finished you shuold see this [windows](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
 
+8. Now click on Windows and search for PostgreSQL. Open the folder and click on [pgAdmin4](https://cdn.discordapp.com/attachments/771635939700768769/827823887495856128/unknown.png).
+
+9. After it loads, it asks for the [password](https://cdn.discordapp.com/attachments/771635939700768769/827824348562849802/unknown.png) you used during the installation.
+
+10. Click on **Servers** on the left side and open **Databases**. You can see that one with the name **postgres** already exists. 
+
+11. Right-Click on Databases and select **Create Database**. Take **PostgreSQL-Tickets** as the name and click on save.
+
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
 
