@@ -100,5 +100,5 @@ Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF).
 
 I am not going to explain how it works with other databases!
 
-**As I wrote at the beginning, this tutorial is not for complete beginners.**
+**As I wrote at the beginning, this tutorial is not for beginners.**
 
