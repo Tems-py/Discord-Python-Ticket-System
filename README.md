@@ -91,8 +91,7 @@ There are three options for the message in the ticket channel.
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
-After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will appear. All closed tickets are saved in this channel.
-
+After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will appear.
 # Done
 
 If you did everything correctly your bot should work like in the examples!
