@@ -54,7 +54,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 2. Open ``data.json`` and fill in your bot-token and db-password (*The one you created at the beginning*)
 
-3. Start the bot and type ``?ticket`` in your ticket-channel. A message like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should show up.
+3. Start the bot and type ``?ticket`` in your ticket-channel. A [message](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should show up.
 
 4. Now copy the ID of your server and the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
 
