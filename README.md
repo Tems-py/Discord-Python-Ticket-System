@@ -87,7 +87,7 @@ There are three options for the message in the ticket channel.
 
 ✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
-⛔ -> Mention every supporter (*Does not do anything right now - I'm at it!*)
+📌 -> Mention every supporter (*Does not do anything right now - I'm at it!*)
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
@@ -98,7 +98,7 @@ If you did everything correctly your bot should work like in the examples!
 
 Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF).
 
-I am not going to explain how it works with other databases!
+I am not going to explain how it works with other databases! (Or Replit)
 
 **As I wrote at the beginning, this tutorial is not for beginners.**
 
