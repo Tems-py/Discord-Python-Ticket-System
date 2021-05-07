@@ -31,7 +31,7 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 6. Now start the [installation](https://cdn.discordapp.com/attachments/771635939700768769/827819917829996554/unknown.png).
 
-7. After the installation is finished you shuold see this [windows](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
+7. After the installation is finished you shuold see this [window](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
 
 8. Now click on Windows and search for PostgreSQL. Open the folder and click on [pgAdmin4](https://cdn.discordapp.com/attachments/771635939700768769/827823887495856128/unknown.png).
 
