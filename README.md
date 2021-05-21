@@ -58,11 +58,11 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 4. Open the database again and fill in the missing two IDs.
 
-4.1 Right-Click on ``tickets`` and click on ``View / Edit Data`` -> ``All Rows``.
+4.1. Right-Click on ``tickets`` and click on ``View / Edit Data`` -> ``All Rows``.
 
-4.2 Double-Click in the [empty spaces](https://cdn.discordapp.com/attachments/771635939700768769/845239738273366036/unknown.png) and fill in the ID of your ticket-message and the ID of your guild.
+4.2. Double-Click in the [empty spaces](https://cdn.discordapp.com/attachments/771635939700768769/845239738273366036/unknown.png) and fill in the ID of your ticket-message and the ID of your guild.
 
-4.3 After you filled in both IDs save them by clicking on the [little arrow}(https://cdn.discordapp.com/attachments/771635939700768769/845240257602781224/unknown.png)
+4.3. After you filled in both IDs save them by clicking on the [little arrow](https://cdn.discordapp.com/attachments/771635939700768769/845240257602781224/unknown.png)
 
 5. When you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/840124556731088896/unknown.png) inside.
 
