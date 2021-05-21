@@ -33,21 +33,21 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 7. After the installation is finished you shuold see this [window](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
 
-8. Now click on Windows and search for PostgreSQL. Open the folder and click on [pgAdmin4](https://cdn.discordapp.com/attachments/771635939700768769/827823887495856128/unknown.png).
+8. Open the PostgreSQL folder and click on [pgAdmin4](https://cdn.discordapp.com/attachments/771635939700768769/827823887495856128/unknown.png).
 
-9. After it loads, it asks for the [password](https://cdn.discordapp.com/attachments/771635939700768769/827824348562849802/unknown.png) you used during the installation.
+9. After pgAdmin4 has loaded, it will ask you for the [password](https://cdn.discordapp.com/attachments/771635939700768769/827824348562849802/unknown.png) you chose during the installation.
 
-10. Click on **Servers** on the left side and open **Databases**. You can see that one with the name **postgres** already exists. 
+10. Click on **Servers** on the left side and open **Databases**. You can see that one database with the name **postgres** already exists. 
 
 11. Right-Click on Databases and select **Create Database**. Name it **PostgreSQL-Tickets** and click on save.
 
-12. The Database should appear on the left side. Open it and scroll down to **Schemas**. If you have Schemas open, you will find **Tables** below. 
+12. The Database should appear on the left side. Open it and scroll down to **Schemas**. You can find **Tables** directly below. 
 
-13. Right-Click on Tables and create a new one. Call it **tickets** and add two columns named ``guild_id`` (PK) and ``ticket_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/827830274615935026/Unbenannt.png).
+13. Right-Click on Tables and create a new one. Call it **tickets** and add two columns named ``guild_id`` and ``ticket_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/845238042768048138/unknown.png).
 
-14. Add another Table named **requests** with four columns named ``guild_id``, ``channel_name``, ``channel_id`` and ``user_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/840122943220088852/unknown.png).
+14. Add a second table named **requests**. Add four columns with the names: ``guild_id``, ``channel_name``, ``channel_id`` and ``user_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/840122943220088852/unknown.png).
 
-15. Now the database setup is finished -  dont close it now you will need it later again.
+15. Dont close pgAdmin4 yet, you will need it later again.
 
 # How to create the same bot for your server
 1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
@@ -56,9 +56,15 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 
 3. Start the bot and type ``?ticket`` in your ticket-channel. A [message](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should show up.
 
-4. Now copy the ID of your server and the ID of the message you just created and fill it in the database. Your DB should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/827460984628183060/unknown.png).
+4. Open the database again and fill in the missing two IDs.
 
-5. If you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/840124556731088896/unknown.png) inside.
+4.1 Right-Click on ``tickets`` and click on ``View / Edit Data`` -> ``All Rows``.
+
+4.2 Double-Click in the [empty spaces](https://cdn.discordapp.com/attachments/771635939700768769/845239738273366036/unknown.png) and fill in the ID of your ticket-message and the ID of your guild.
+
+4.3 After you filled in both IDs save them by clicking on the [little arrow}(https://cdn.discordapp.com/attachments/771635939700768769/845240257602781224/unknown.png)
+
+5. When you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/840124556731088896/unknown.png) inside.
 
 #### If you want to change the embed-message open ``ticket.py``.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
