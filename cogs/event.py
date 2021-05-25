@@ -40,7 +40,7 @@ class MemberEvents(commands.Cog):
 
             db_count = await self.client.db.fetch("SELECT COUNT(user_id) FROM requests WHERE guild_id = $1 AND user_id = $2", guild_id, user_id)
 
-            if db_count[0]["count"] > 3:
+            if db_count[0]["count"] > 2:
 
                 embed = discord.Embed(title="You already have three pending tickets!", description="``Please close your tickets before creating a new one.``", color=0xf7fcfd)
                 return await user.send(embed=embed)
