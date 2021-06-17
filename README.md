@@ -1,3 +1,5 @@
+[![Discord Bots](https://top.gg/api/widget/status/739740219544305714.svg)](https://top.gg/bot/739740219544305714)
+
 # Ticket-Bot
 A discord ticket system with PostgreSQL.
 
