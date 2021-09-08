@@ -1,74 +1,77 @@
-[![Discord Bots](https://top.gg/api/widget/status/739740219544305714.svg)](https://top.gg/bot/739740219544305714)
-
-# Ticket-Bot
-A discord ticket system with PostgreSQL.
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
 # Information
-This is not supposed to be a copy and paste exercise, if you want to recreate the system, learn python first. 
+Take your time and work your way through the tutorial. If you have any problems, please feel free to contact me via [discord](https://discord.gg/ykF6UfqWgF).
 
-If you have any improvement suggestions feel free to contact me.
-
-### NOT for beginners of discord.py!
-
-If you are completly new to discord.py or generally python - DO NOT JUST copy the code - study the syntax first and try slightly easier projects. 
+If you are using the ticket system, please give the repository a star and / or create a fork.
 
 # Requirements
 
-- Python 3.8.6 or higher
-- discord.py (Tested with version 1.6.0)
-- PostgreSQL Database (I am using a local PostgreSQL Database)
-- asyncpg
+- [Python3](https://www.python.org/downloads/) (Tested with version: 3.9.7)
+- [Database](https://www.postgresql.org/download/) (I am using a local PostgreSQL-Database)
+- [discord.py](https://pypi.org/project/discord.py/) (Tested with version: 1.7.3)
+- [asyncpg](https://pypi.org/project/asyncpg/) (Tested with version: 0.24.0)
 
 # How to create a local PostgreSQL Database
 
-1. Download the installer from the [website](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
+1. Download the installer from the [website](https://www.postgresql.org/download/).
 
-2. After the download is complete start the installation by double-clicking on the .exe. 
+2. Start the installation by double-clicking on `postgresql-13.4-1-windows-x64.exe`. 
 
-3. A Setup-Window should show up. Just keep clicking on NEXT until the [password window](https://cdn.discordapp.com/attachments/771635939700768769/827816815886991380/unknown.png). 
+3. A [setup window](https://cdn.discordapp.com/attachments/885056750519201842/885056792525168640/unknown.png) will pop up. You should see these steps during the installation:
 
-4. **Choose a good and secure password and remember it!** 
+- [Installation Directory](https://cdn.discordapp.com/attachments/885056750519201842/885057796494737429/unknown.png)
 
-5. You can use the default settings for the next two windows.
+- [Select Components](https://cdn.discordapp.com/attachments/885056750519201842/885058027722526770/unknown.png)
 
-6. Now start the [installation](https://cdn.discordapp.com/attachments/771635939700768769/827819917829996554/unknown.png).
+- [Data Directory](https://cdn.discordapp.com/attachments/885056750519201842/885058170597285918/unknown.png)
 
-7. After the installation is finished you shuold see this [window](https://cdn.discordapp.com/attachments/771635939700768769/827813661182525460/unknown.png). You dont need to launch Stack-Builder - just click on finish. 
+- [Password](https://cdn.discordapp.com/attachments/885056750519201842/885058346447679518/unknown.png) -> **Choose a secure password and don't forget it!**
 
-8. Open the PostgreSQL folder and click on [pgAdmin4](https://cdn.discordapp.com/attachments/771635939700768769/827823887495856128/unknown.png).
+- [Port](https://cdn.discordapp.com/attachments/885056750519201842/885058792977469480/unknown.png)
 
-9. After pgAdmin4 has loaded, it will ask you for the [password](https://cdn.discordapp.com/attachments/771635939700768769/827824348562849802/unknown.png) you chose during the installation.
+- [Advanced Options](https://cdn.discordapp.com/attachments/885056750519201842/885058954097487882/unknown.png)
 
-10. Click on **Servers** on the left side and open **Databases**. You can see that one database with the name **postgres** already exists. 
+- [Pre Installation Summary](https://cdn.discordapp.com/attachments/885056750519201842/885059074318798898/unknown.png)
 
-11. Right-Click on Databases and select **Create Database**. Name it **PostgreSQL-Tickets** and click on save.
+- [Ready to Install](https://cdn.discordapp.com/attachments/885056750519201842/885059197870428170/unknown.png)
 
-12. The Database should appear on the left side. Open it and scroll down to **Schemas**. You can find **Tables** directly below. 
+4. Start the installation.
 
-13. Right-Click on Tables and create a new one. Call it **tickets** and add two columns named ``guild_id`` and ``ticket_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/845238042768048138/unknown.png).
+5. After the [installation](https://cdn.discordapp.com/attachments/885056750519201842/885060180574875648/unknown.png) is complete, you can click on `Finish`.
 
-14. Add a second table named **requests**. Add four columns with the names: ``guild_id``, ``channel_name``, ``channel_id`` and ``user_id``. Like [this](https://cdn.discordapp.com/attachments/771635939700768769/840122943220088852/unknown.png).
+6. Open the PostgreSQL folder (`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PostgreSQL 13`) and double click on [pgAdmin4](https://cdn.discordapp.com/attachments/885056750519201842/885062929664327690/unknown.png).
 
-15. Dont close pgAdmin4 yet, you will need it later again.
+7. After pgAdmin4 has loaded, it will ask you for the password you chose during the installation.
 
-# How to create the same bot for your server
-1. Go on the [discord developer portal](https://discord.com/developers/applications) and make a new application. Now create a new bot and add him to your server.
+8. Click on `Servers` on the left side and open `Databases`. You can see that one database with the name `postgres` already exists. 
 
-2. Open ``data.json`` and fill in your bot-token and db-password (*The one you created at the beginning*)
+9. Right click on `Databases` and select `Create Database`. Name it `PostgreSQL-Tickets` and click on save.
 
-3. Start the bot and type ``?ticket`` in your ticket-channel. A [message](https://cdn.discordapp.com/attachments/771635939700768769/827460503185653790/unknown.png) should show up.
+10. Open the database and scroll down to `Schemas`. After opening Shemas, you should see `Tables` a little further down.
 
-4. Open the database again and fill in the missing two IDs.
+11. Right click on `Tables` and select `Create Table`. Call it `tickets` and add two columns named `guild_id` and `ticket_id`. [Example](https://cdn.discordapp.com/attachments/885056750519201842/885072018272305212/unknown.png)
 
-4.1. Right-Click on ``tickets`` and click on ``View / Edit Data`` -> ``All Rows``.
+12. Fill in your `guild_id` and save the [changes](https://cdn.discordapp.com/attachments/885056750519201842/885082784195051540/unknown.png).
 
-4.2. Double-Click in the [empty spaces](https://cdn.discordapp.com/attachments/771635939700768769/845239738273366036/unknown.png) and fill in the ID of your ticket-message and the ID of your guild.
+12. Create a second table named `requests` and add four columns: `guild_id`, `channel_name`, `channel_id`, and `user_id`. [Example](https://cdn.discordapp.com/attachments/885056750519201842/885073845541822484/unknown.png)
 
-4.3. After you filled in both IDs save them by clicking on the [little arrow](https://cdn.discordapp.com/attachments/771635939700768769/845240257602781224/unknown.png)
+# Create the same bot for your server
+1. Open the [discord developer portal](https://discord.com/developers/applications) and create a new application. 
 
-5. When you are done, restart the bot and click on the 📩. You should see a new channel with a [message](https://cdn.discordapp.com/attachments/771635939700768769/840124556731088896/unknown.png) inside.
+2. Click on `Bot` on the left side and add a new one. Make sure to enable [Intents](https://cdn.discordapp.com/attachments/885056750519201842/885075848527511622/unknown.png).
 
-#### If you want to change the embed-message open ``ticket.py``.
+3. Open [`data.json`](https://github.com/Sk1pzz/Discord-Ticket-System/blob/main/data.json) and fill in your `bot-token` and `db-password`. (*The one you created at the beginning*)
+
+4. On your discord server: Create a category named `tickets` and a channel also named `tickets`.
+
+5. Start the bot via the command line and type `?ticket` in the tickets channel. You should see this [message](https://cdn.discordapp.com/attachments/885056750519201842/885081261314560020/unknown.png).
+
+6. You can now click on the small envelope below the message. A new channel should appear.
+
+7. That's pretty much all. If you like the system, I would be happy if you put a star on the repository :)
+
+#### If you want to change the embed-message open `ticket.py`.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
 @commands.command()
@@ -76,18 +79,24 @@ If you are completly new to discord.py or generally python - DO NOT JUST copy th
 async def ticket(self, ctx):
 
     embed = discord.Embed(
-        title="Would you like to create a ticket?", 
-        description="If you have any questions or concerns create a new ticket by clicking on the emoji below this message.", 
-        color=0xf7fcfd)
+        description="Any questions or concerns? We will be happy to assist you.", 
+        color=0x2F3136
+    )
 
-    embed.add_field(name="Do you want to report someone?", value="Please contact a supporter or moderator directly!", inline=True)
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/771635939700768769/773121323341578250/external-content.duckduckgo.com.png")
     embed.set_author(name="TiLiKas-Tickets")
+
+    embed.add_field(
+        name="Have you checked if someone already had the problem?",
+        value="To make our work easier, we would be grateful if you first discuss your problem with other members. That takes some work off our shoulders and may also save you some time.",
+        inline=False
+    )
+
+    embed.set_footer(text="NOTICE : one user can only have three tickets at once!")
+    embed.set_thumbnail(url=ctx.me.avatar_url)
 
     msg = await ctx.send(embed=embed)
     await msg.add_reaction("📩")
 ```
-**I would recommend to change the authors-name (TiLiKas-Tickets)**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,14 +108,13 @@ There are three options for the message in the ticket channel.
 
 🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
-After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will appear.
+After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will pop up.
+
 # Done
 
 If you did everything correctly your bot should work like in the examples!
 
-Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF).
+Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF). 
 
-I am not going to explain how it works with other databases! (Or Replit)
-
-**As I wrote at the beginning, this tutorial is not for beginners!**
+**Please understand that I cannot explain how it works with other databases.**
 
