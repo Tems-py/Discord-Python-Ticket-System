@@ -50,7 +50,7 @@ class Events(commands.Cog):
 
                     try:
 
-                        embed = discord.Embed(color=self.client.color)
+                        embed = discord.Embed(color=0x2F3136)
                         embed.title = "You already have three pending tickets!"
                         embed.description = "Please close your open tickets before creating new ones."
                         return await user.send(embed=embed)
@@ -80,7 +80,7 @@ class Events(commands.Cog):
                 query = """INSERT INTO requests (guild_id, channel_name, channel_id, user_id) VALUES ($1, $2, $3, $4)"""
                 await self.client.db.execute(query, guild.id, str(ticket_channel_name), ticket_channel_name.id, user_id)
 
-                embed = discord.Embed(title="How can we help you?", color=self.client.color)
+                embed = discord.Embed(title="How can we help you?", color=0x2F3136)
                 embed.add_field(name="✅ Claim the Ticket!", value="```Claim the ticket so that the other supporters know that it is already being processed.```", inline=False)
                 embed.add_field(name="📌 Inform the Support about your Ticket", value="```Inform the other supporters about your ticket to guarantee a quick processing.```", inline=False)
                 embed.add_field(name="🔒 Close the Ticket!", value="```Close the ticket as soon as the problem has been resolved.```", inline=False)
@@ -116,7 +116,7 @@ class Events(commands.Cog):
 
                     embed = discord.Embed(
                         description="**You can't claim the ticket!**",
-                        color=self.client.color
+                        color=0x2F3136
                     )
 
                     await channel.send(embed=embed)
@@ -125,7 +125,7 @@ class Events(commands.Cog):
 
                     embed = discord.Embed(
                         description = f"**The ticket was claimed by {user.name}.**",
-                        color = self.client.color)
+                        color = 0x2F3136)
 
                     await channel.send(embed=embed)
         
@@ -145,7 +145,7 @@ class Events(commands.Cog):
 
                 embed = discord.Embed(
                     description = f"**The ticket was closed by {user.name}.**",
-                    color = self.client.color)
+                    color = 0x2F3136)
 
                 await channel.send(embed=embed)
                 await asyncio.sleep(10)
@@ -160,7 +160,7 @@ class Events(commands.Cog):
                 embed = discord.Embed(
                     description = f"The **{db_channel_name[0]}** was closed by **{user.name}**",
                     timestamp = datetime.utcnow(),
-                    color = self.client.color)
+                    color = 0x2F3136)
 
                 await channel_log.send(embed=embed)
                 await self.client.db.fetch("DELETE FROM requests WHERE channel_id = $1", channel_id)
