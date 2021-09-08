@@ -13,7 +13,7 @@ class Ticket(commands.Cog):
 
         embed = discord.Embed(
             description="Any questions or concerns? We will be happy to assist you.", 
-            color=self.client.color
+            color=0x2F3136
         )
 
         embed.set_author(name="TiLiKas-Tickets")
@@ -25,14 +25,14 @@ class Ticket(commands.Cog):
         )
 
         embed.set_footer(text="NOTICE : one user can only have three tickets at once!")
-        embed.set_thumbnail(url="https://i.imgur.com/OG3IJF9.png")
+        embed.set_thumbnail(url=ctx.me.avatar_url)
 
         msg = await ctx.send(embed=embed)
         await msg.add_reaction("📩")
 
         await self.client.db.execute("UPDATE tickets SET ticket_id = $2 WHERE guild_id = $1", ctx.guild.id, msg.id)
 
-        embed = discord.Embed(color=self.client.color)
+        embed = discord.Embed(color=0x2F3136)
         embed.set_author(name="Successfully created the ticket-system.")
 
         confirmEmbed = await ctx.send(embed=embed)
