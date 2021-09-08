@@ -1,7 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
 # Information
-Take your time and work your way through the tutorial. If you have any problems, please feel free to contact me via [discord](https://discord.gg/ykF6UfqWgF).
+Take your time and work your way through the tutorial. If you have any problems, feel free to contact me via [discord](https://discord.gg/ykF6UfqWgF).
 
 If you are using the ticket system, please give the repository a star and / or create a fork.
 
