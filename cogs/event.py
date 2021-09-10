@@ -80,13 +80,12 @@ class Events(commands.Cog):
                 query = """INSERT INTO requests (guild_id, channel_name, channel_id, user_id) VALUES ($1, $2, $3, $4)"""
                 await self.client.db.execute(query, guild.id, str(ticket_channel_name), ticket_channel_name.id, user_id)
 
-                embed = discord.Embed(title="How can we help you?", color=0x2F3136)
-                embed.add_field(name="✅ Claim the Ticket!", value="```Claim the ticket so that the other supporters know that it is already being processed.```", inline=False)
-                embed.add_field(name="📌 Inform the Support about your Ticket", value="```Inform the other supporters about your ticket to guarantee a quick processing.```", inline=False)
-                embed.add_field(name="🔒 Close the Ticket!", value="```Close the ticket as soon as the problem has been resolved.```", inline=False)
-
-                embed.set_author(name="TiLiKas Ticket Bot")
-                embed.set_image(url="https://i.imgur.com/BLUcmmJ.png")
+                embed = discord.Embed(title="How can we help you?", color=self.client.color).set_image(url="https://i.imgur.com/Oegyaex.jpg")
+                embed.description = "You can already write your questions in the chat, a supporter will take care of you as soon as possible. "
+                embed.description += "If no one contacts you within an hour, you can also ping a moderator.\n\n"
+                embed.description += "`✅` **Claim the ticket.** (only for support)\n"
+                embed.description += "`📌` **Inform the support about your ticket.**\n"
+                embed.description += "`🔒`  **Close the ticket when all questions have been answered.**"
 
                 ticket_channel_message = await ticket_channel_name.send(embed=embed)
 
