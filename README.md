@@ -1,232 +1,120 @@
-# Ticket-Bot
-This is a public repository for my discord ticket system
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
 # Information
-Please notice that this is just an pretty basic example of a ticket-bot.
-I will constantly try to improve and upgrade the bot.
+Take your time and work your way through the tutorial. If you have any problems, feel free to contact me via [discord](https://discord.gg/ykF6UfqWgF).
 
-If you have any suggestions for improvements feel free to contact me 
-
-### For beginners of discord.py!
-
-If you are completly new to discord.py or generally python - I would not recommend to just copy the code - study the discord.py syntax first and try a slightly easier project. 
-While it may seems straightforward to advanced users, it can be confusing for newbies.
+If you are using the ticket system, please give the repository a star and / or create a fork.
 
 # Requirements
 
-- Python 3.8.6 ([download](https://www.python.org/downloads/release/python-386/))
-- discord.py (pip install -U discord.py[voice]) (Tested with version 1.6.0)
+- [Python3](https://www.python.org/downloads/) (Tested with version: 3.9.7)
+- [Database](https://www.postgresql.org/download/) (I am using a local PostgreSQL-Database)
+- [discord.py](https://pypi.org/project/discord.py/) (Tested with version: 1.7.3)
+- [asyncpg](https://pypi.org/project/asyncpg/) (Tested with version: 0.24.0)
 
-# How to create the same bot for your server
-1. Go on the [discord developer portal](https://discord.com/developers/applications) and create a bot.
+# How to create a local PostgreSQL Database
 
-2. Add the bot to your server.
+1. Download the installer from the [website](https://www.postgresql.org/download/).
 
-3. Create a directory where you want your code to be - If you donwloaded the ZIP just extract the foler and paste it into the new created directory! - remember the path - you need to start the bot from it
+2. Start the installation by double-clicking on `postgresql-13.4-1-windows-x64.exe`. 
 
-4. After you downloaded everything go to ``token.txt`` and change ``PASTE_YOUR_TOKEN_IN_HERE`` with the token from your [bot](https://discord.com/developers).
+3. A [setup window](https://cdn.discordapp.com/attachments/885056750519201842/885056792525168640/unknown.png) will pop up. You should see these steps during the installation:
 
-5. Next open the ``cogs`` folder - in the folder are two files ``admin.py`` and ``reaction.py``.
+- [Installation Directory](https://cdn.discordapp.com/attachments/885056750519201842/885057796494737429/unknown.png)
 
-6. Open ``admin.py`` - your code should look like this:
+- [Select Components](https://cdn.discordapp.com/attachments/885056750519201842/885058027722526770/unknown.png)
 
+- [Data Directory](https://cdn.discordapp.com/attachments/885056750519201842/885058170597285918/unknown.png)
+
+- [Password](https://cdn.discordapp.com/attachments/885056750519201842/885058346447679518/unknown.png) -> **Choose a secure password and don't forget it!**
+
+- [Port](https://cdn.discordapp.com/attachments/885056750519201842/885058792977469480/unknown.png)
+
+- [Advanced Options](https://cdn.discordapp.com/attachments/885056750519201842/885058954097487882/unknown.png)
+
+- [Pre Installation Summary](https://cdn.discordapp.com/attachments/885056750519201842/885059074318798898/unknown.png)
+
+- [Ready to Install](https://cdn.discordapp.com/attachments/885056750519201842/885059197870428170/unknown.png)
+
+4. Start the installation.
+
+5. After the [installation](https://cdn.discordapp.com/attachments/885056750519201842/885060180574875648/unknown.png) is complete, you can click on `Finish`.
+
+6. Open the PostgreSQL folder (`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PostgreSQL 13`) and double click on [pgAdmin4](https://cdn.discordapp.com/attachments/885056750519201842/885062929664327690/unknown.png).
+
+7. After pgAdmin4 has loaded, it will ask you for the password you chose during the installation.
+
+8. Click on `Servers` on the left side and open `Databases`. You can see that one database with the name `postgres` already exists. 
+
+9. Right click on `Databases` and select `Create Database`. Name it `PostgreSQL-Tickets` and click on save.
+
+10. Open the database and scroll down to `Schemas`. After opening Shemas, you should see `Tables` a little further down.
+
+11. Right click on `Tables` and select `Create Table`. Call it `tickets` and add two columns named `guild_id` and `ticket_id`. [Example](https://cdn.discordapp.com/attachments/885056750519201842/885072018272305212/unknown.png)
+
+12. Fill in your `guild_id` and save the [changes](https://cdn.discordapp.com/attachments/885056750519201842/885082784195051540/unknown.png).
+
+12. Create a second table named `requests` and add four columns: `guild_id`, `channel_name`, `channel_id`, and `user_id`. [Example](https://cdn.discordapp.com/attachments/885056750519201842/885073845541822484/unknown.png)
+
+# Create the same bot for your server
+1. Open the [discord developer portal](https://discord.com/developers/applications) and create a new application. 
+
+2. Click on `Bot` on the left side and add a new one. Make sure to enable [Intents](https://cdn.discordapp.com/attachments/885056750519201842/885075848527511622/unknown.png).
+
+3. Open [`data.json`](https://github.com/Sk1pzz/Discord-Ticket-System/blob/main/data.json) and fill in your `bot-token` and `db-password`. (*The one you created at the beginning*)
+
+4. On your discord server: Create a category named `tickets` and a channel also named `tickets`.
+
+5. Start the bot via the command line and type `?ticket` in the tickets channel. You should see this [message](https://cdn.discordapp.com/attachments/885056750519201842/885081261314560020/unknown.png).
+
+6. You can now click on the small envelope below the message. A new channel should appear.
+
+7. That's pretty much all. If you like the system, I would be happy if you put a star on the repository :)
+
+#### If you want to change the embed-message open `ticket.py`.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```python
-import discord
-import asyncio
-from discord.ext import commands
-
-
-class AdminCommands(commands.Cog):
-
-    def __init__(self, client):
-        self.client = client
-
-    @commands.command()
-    @commands.has_permissions(administrator=True)
-    async def ticket(self, ctx):
-        title = "Would you like to create a ticket?"
-        description = "If you have a question or concern, please create a ticket by clicking on the 📩 emoji."
-        name = "If you have any general questions about the ticket system please contact a supporter!" 
-
-        embed = discord.Embed(title=title, description=description, color=0x2f2fd0)
-        embed.add_field(name="General questions!", value=name, inline=True)
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/771635939700768769/773121323341578250/external-content.duckduckgo.com.png")
-        embed.set_author(name="TiLiKas Support Bot")
-
-        msg = await ctx.send(embed=embed)
-        await msg.add_reaction("📩")
-        await ctx.message.delete()
-        
-def setup(client):
-    client.add_cog(AdminCommands(client))
-```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-You can change the text of the embed however you want - **change the name of the author in the embed (TiLiKas Support Bot)**
-
-6. Go on your discord server and create a category called ``tickets``.
-
-7. Create two channels. One called ``tickets`` and the other one ``log-channel``.
-
-7. Start the bot and type ``?ticket`` in the ``tickets`` channel.
-
-If you did everything correctly you will see a message like [this](https://cdn.discordapp.com/attachments/771635939700768769/798486004981039107/unknown.png).
-
-8. After you are done navigate to the folder where your bot is saved and open ``reaction.py``.
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-```python
-if message_id == MESSAGE_ID and emoji == "📩":
-
-    self.ticket_creator = user_id
-
-    message = await channel.fetch_message(message_id)
-    await message.remove_reaction("📩",user)
-
-    member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
-    support_role = guild.get_role(ROLE_ID)
-    category = guild.get_channel(CATEGORY_ID)
-    overwrites = {
-        guild.default_role: discord.PermissionOverwrite(read_messages=False),
-        member: discord.PermissionOverwrite(read_messages=True, send_messages=True),
-        support_role: discord.PermissionOverwrite(read_messages=True, send_messages=True)
-    }
-    ticket_nr = random.randint(100,999)
-    self.channel_ticket = await category.create_text_channel(f'ticket-{ticket_nr}', overwrites=overwrites)
+@commands.command()
+@commands.has_permissions(administrator=True)
+async def ticket(self, ctx):
 
     embed = discord.Embed(
-        title="How can we help you?",
-        description="A supporter will take care of you as soon as possible.\n\n:white_check_mark: - Claim the ticket\n:no_entry: - Inform the supporters about your ticket\n:lock: - Close the ticket", 
-        color=0x0000ff)
-    embed.set_author(name="TiLiKas Ticket Bot")
-    embed.set_image(url="https://cdn.discordapp.com/attachments/762902708319420439/769130943762923590/unknown.png")
+        description="Any questions or concerns? We will be happy to assist you.", 
+        color=0x2F3136
+    )
 
-    msg = await self.channel_ticket.send(embed=embed)
+    embed.set_author(name="TiLiKas-Tickets")
 
-    await msg.add_reaction("✅")
-    await msg.add_reaction("⛔")
-    await msg.add_reaction("🔒")
+    embed.add_field(
+        name="Have you checked if someone already had the problem?",
+        value="To make our work easier, we would be grateful if you first discuss your problem with other members. That takes some work off our shoulders and may also save you some time.",
+        inline=False
+    )
 
-if channel == self.channel_ticket and emoji == "⛔" and user_id != BOT_ID:
+    embed.set_footer(text="NOTICE : one user can only have three tickets at once!")
+    embed.set_thumbnail(url=ctx.me.avatar_url)
 
-    message = await channel.fetch_message(message_id)
-    await message.remove_reaction("⛔",user)
-
-    await channel.send(f"The ticket ``{self.channel_ticket}`` is now unprocessed for more than 10 minutes! <@&ROLE_ID>")
-
-if channel == self.channel_ticket and emoji == "🔒" and user_id != BOT_ID:
-
-    message = await channel.fetch_message(message_id)
-    await message.remove_reaction("🔒",user)
-
-    now = datetime.now()   
-    time = now.strftime(str("%d.%m.%Y") + " at " + str("%H:%M"))
-
-    channel_log = self.client.get_channel(LOG_CHANNEL_ID)
-    text = f"The ticket ``{self.channel_ticket}`` was closed by {user.mention} on {time}"
-
-    embed = discord.Embed(
-        title = "Closed Ticket",
-        description = text,
-        color = 0x0000ff)
-
-    await channel_log.send(embed=embed)
-
-    embed = discord.Embed(
-        title = "Ticket closed!",
-        description = f":tickets: The ticket was just closed by {user.mention}.",
-        color = 0x0000ff)
-
-    await channel.send(embed=embed)
-
-    await asyncio.sleep(10)
-
-    await channel.delete()
-
-if channel == self.channel_ticket and emoji == "✅" and user_id != BOT_ID:
-
-    message = await channel.fetch_message(message_id)
-    await message.remove_reaction("✅",user)
-
-    if self.ticket_creator == user_id:
-
-        embed = discord.Embed(
-            title = "You cant claim the ticket!",
-            color = 0x0000ff)
-        embed.set_author(name="TiLiKas Ticket Bot")
-
-        await channel.send(embed=embed)
-
-    else:
-
-        embed = discord.Embed(
-            title = "Ticket claimed!",
-            description = f"The ticket was claimed by {user.mention}.",
-            color = 0x0000ff)
-        embed.set_author(name="TiLiKas Ticket Bot")
-
-        await channel.send(embed=embed)
+    msg = await ctx.send(embed=embed)
+    await msg.add_reaction("📩")
 ```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Now you need to make a few changes:
-
--> Change ``MESSAGE_ID`` to the ID of the [message](https://cdn.discordapp.com/attachments/771635939700768769/798486563449208842/unknown.png).
-
--> Change ``ROLE_ID`` to the ID of the role that should have access to the tickets (f.e. [Support](https://media.discordapp.net/attachments/771635939700768769/798486693945540628/unknown.png)) (*There is also a ROLE_ID on line 67*)
-
--> Change ``CATEGORY_ID`` to the ID of the [category](https://cdn.discordapp.com/attachments/771635939700768769/798486814217863228/unknown.png) you created
-
--> Change ``BOT_ID`` to the ID of your bot
-
--> Change ``LOG_CHANNEL_ID`` to the ID of the channel where you want to get the information if a ticket gets closed
-
-**ALSO dont forget to change the authors name to the name of your bot!**
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-9. Restart the bot and klick on 📩  - it should look like [this](https://cdn.discordapp.com/attachments/771635939700768769/798487685471797328/unknown.png)
+There are three options for the message in the ticket channel.
 
-You have three diffrent emoji choices:
+✅ -> Claim the ticket (*The creator of the ticket cant claim it*)
 
-✅ -> Claim the ticket ([example](https://cdn.discordapp.com/attachments/771635939700768769/798489702093029376/unknown.png)) (*The creator of the ticket cant claim it*)
+📌 -> Mention every supporter (*Does not do anything right now - I'm at it!*)
 
-⛔ -> Mention every supporter ([example](https://cdn.discordapp.com/attachments/771635939700768769/798487939063087133/unknown.png))
+🔒 -> Close the ticket - the channel will be delete after 10 seconds.
 
-🔒 -> Close the ticket - channel will delete itself after 10 seconds ([example](https://cdn.discordapp.com/attachments/771635939700768769/798488068038328330/unknown.png))
-
-**After closing the ticket it will no longer be accessable**
-
-# LOG - Channel
-
-If you dont want to use this channel just delete this part:
-
-```python
-now = datetime.now()   
-time = now.strftime(str("%d.%m.%Y") + " at " + str("%H:%M"))
-
-channel_log = self.client.get_channel(LOG_CHANNEL_ID)
-text = f"The ticket ``{self.channel_ticket}`` was closed by {user.mention} on {time}"
-
-embed = discord.Embed(
-    title = "Closed Ticket",
-    description = text,
-    color = 0x0000ff)
-
-await channel_log.send(embed=embed)
-```
-
-**You can also remove these imports:**
-
-- import datetime
-- from time import strftime
-- from datetime import datetime
+After clicking on the lock, the channel will be deleted and a new channel named **ticket-log** will pop up.
 
 # Done
 
-If you did everything correctly the bot should work like in the examples!
+If you did everything correctly your bot should work like in the examples!
 
-Still questions? Join my [discord server](https://discord.gg/WRH22qat76)
+Still questions? Join my [discord server](https://discord.gg/ykF6UfqWgF). 
 
-(I will not reply to E-Mails)
+**Please understand that I cannot explain how it works with other databases.**
+
